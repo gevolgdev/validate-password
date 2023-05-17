@@ -14,6 +14,12 @@ const verifyPassword = (password) => {
     console.log('Sem letra minuscula ou maiuscula.');
     return;
   };
+  if(!/[0-9]/.test(password)) {
+    console.log('Sem numero.');
+    return;
+  };
+
+
   console.log('Senha protegida!');
 };
 
