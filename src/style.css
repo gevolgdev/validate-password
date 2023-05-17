@@ -45,6 +45,6 @@ button.input-pass{
   width: 300px;
   font-size: 1.3rem;
 }
-
-.pass {
+.feedback {
+  color:#4e4e4e;
 }
