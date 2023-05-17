@@ -10,7 +10,11 @@ const verifyPassword = (password) => {
     console.log('Muito curto ou muito longa.');
     return;
   };
-  
+  if(!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
+    console.log('Sem letra minuscula ou maiuscula.');
+    return;
+  };
+  console.log('Senha protegida!');
 };
 
 const handleValidate = () => {
