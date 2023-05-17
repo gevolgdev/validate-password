@@ -18,7 +18,18 @@ const verifyPassword = (password) => {
     console.log('Sem numero.');
     return;
   };
-
+  const specialCaracter = "!@#$%^&*()_-+=|]}[{':;?/>.<,~".split('');
+  let noSpecialCaracter = true;
+  for(let i= 0; i < specialCaracter.length; i++) {
+    if(password.includes(specialCaracter[i])) {
+      noSpecialCaracter = false;
+      break;
+    };
+  };
+  if(noSpecialCaracter) {
+    console.log('Sem caracteres especial.');
+    return;
+  };
 
   console.log('Senha protegida!');
 };
